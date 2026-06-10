@@ -1,53 +1,22 @@
-# bsuite-bindings
+# bsuite
 
-Installer for the b-* prompt lookup tools. Registers each tool as a Claude Code skill, Codex AGENTS template, or Cursor rule so the agent loop discovers and invokes them automatically.
-
-bsuite-bindings makes the b-* binaries reachable from inside an LLM-agent loop without operator-authored system-prompt glue. It installs target-native instruction files that tell the agent when to call `bground` and `banchor`, how to pass inputs, and how to interpret exit codes.
-
-## Command surface
-
-```sh
-bsuite-bindings install --target=<claude|codex|cursor>
-```
+Entry point for the b-* prompt lookup tools. Installs the tools, registers each as a Claude Code skill, Codex AGENTS template, or Cursor rule so the agent loop discovers and invokes them, and updates installed tools on demand.
 
 ## Install
 
 ```sh
-npm install -D @booga/bsuite-bindings
+npm install -D @booga/bsuite
 ```
 
 ## Use
 
-Install Claude Code skills into the current project:
-
 ```sh
-bsuite-bindings install --target=claude --scope=project
-```
-
-Preview a Codex AGENTS.md update without writing files:
-
-```sh
-bsuite-bindings install --target=codex --scope=project --dry-run
-```
-
-Install Cursor rule files into a custom project directory:
-
-```sh
-bsuite-bindings install --target=cursor --dest ./my-project/.cursor/rules
-```
-
-Remove managed Codex content while preserving the rest of AGENTS.md:
-
-```sh
-bsuite-bindings uninstall --target=codex --scope=project
-```
-
-Select a subset of supported binaries:
-
-```sh
-bsuite-bindings install --target=claude --tools=bground,banchor
+bsuite install --target=claude
+bsuite install --target=codex
+bsuite install --target=cursor
+bsuite uninstall --target=claude
 ```
 
 ## License
 
-MIT
+MIT.

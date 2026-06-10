@@ -1,10 +1,10 @@
 {
-  "name": "@booga/bsuite-bindings",
+  "name": "@booga/bsuite",
   "version": "0.1.0",
-  "description": "Installer for the b-* prompt lookup tools. Registers each tool as a Claude Code skill, Codex AGENTS template, or Cursor rule so the agent loop discovers and invokes them automatically.",
+  "description": "Entry point for the b-* prompt lookup tools. Installs the tools, registers each as a Claude Code skill, Codex AGENTS template, or Cursor rule so the agent loop discovers and invokes them, and updates installed tools on demand.",
   "type": "module",
   "bin": {
-    "bsuite-bindings": "./dist/cli.js"
+    "bsuite": "./dist/cli.js"
   },
   "exports": {
     ".": {
