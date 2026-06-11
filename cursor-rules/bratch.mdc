@@ -1,0 +1,7 @@
+---
+description: Prompt lookup tool. Agent names a regression signature from a fixed list; bratch returns the prompt for that regression signature. The prompt tells the agent how to check the diff against a baseline for that regression.
+globs: ["**/*"]
+alwaysApply: false
+---
+
+Use `bratch` from this tool family. Invoke via bash. See exit codes for branch logic.

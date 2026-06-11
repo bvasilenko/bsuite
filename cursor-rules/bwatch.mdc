@@ -1,0 +1,7 @@
+---
+description: Prompt lookup tool. Agent names a finding category from a fixed list; bwatch returns the prompt for that finding category. The prompt tells the agent how to check the external tracker for that finding.
+globs: ["**/*"]
+alwaysApply: false
+---
+
+Use `bwatch` from this tool family. Invoke via bash. See exit codes for branch logic.

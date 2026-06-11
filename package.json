@@ -1,6 +1,6 @@
 {
   "name": "@booga/b",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Entry point for the b-* prompt lookup tools. Installs the tools, registers each as a Claude Code skill, Codex AGENTS template, or Cursor rule so the agent loop discovers and invokes them, and updates installed tools on demand.",
   "type": "module",
   "bin": {

@@ -1,4 +1,4 @@
-import type { ToolName } from './types.js';
+import { SUPPORTED_TOOLS, type ToolName } from './types.js';
 
 const BEGIN_MARKER = '<!-- BSUITE_BINDINGS:BEGIN -->';
 const END_MARKER = '<!-- BSUITE_BINDINGS:END -->';
@@ -49,8 +49,8 @@ function splitToolSections(body: string): { preface: string; sections: Map<ToolN
 
 function toolFromHeading(line: string): ToolName | undefined {
   const heading = line.slice(TOOL_HEADING_PREFIX.length).trim();
-  if (heading === 'bground' || heading === 'banchor') {
-    return heading;
+  if ((SUPPORTED_TOOLS as readonly string[]).includes(heading)) {
+    return heading as ToolName;
   }
   return undefined;
 }

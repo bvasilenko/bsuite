@@ -5,8 +5,8 @@ import { parseTarget, parseTools } from '../src/core/validation.js';
 const supportedTargets = ['claude', 'codex', 'cursor'] as const;
 
 const validToolSelectors: Array<{ selector: string | undefined; tools: string[] }> = [
-  { selector: undefined, tools: ['bground', 'banchor'] },
-  { selector: 'all', tools: ['bground', 'banchor'] },
+  { selector: undefined, tools: ['bground', 'banchor', 'bsmell', 'bratch', 'bwatch', 'bspector'] },
+  { selector: 'all', tools: ['bground', 'banchor', 'bsmell', 'bratch', 'bwatch', 'bspector'] },
   { selector: 'bground', tools: ['bground'] },
   { selector: 'banchor', tools: ['banchor'] },
   { selector: ' bground, banchor, bground ', tools: ['bground', 'banchor'] },

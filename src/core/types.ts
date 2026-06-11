@@ -1,7 +1,7 @@
 export const SUPPORTED_TARGETS = ['claude', 'codex', 'cursor'] as const;
 export type TargetName = (typeof SUPPORTED_TARGETS)[number];
 
-export const SUPPORTED_TOOLS = ['bground', 'banchor'] as const;
+export const SUPPORTED_TOOLS = ['bground', 'banchor', 'bsmell', 'bratch', 'bwatch', 'bspector'] as const;
 export type ToolName = (typeof SUPPORTED_TOOLS)[number];
 
 export type InstallAction = 'install' | 'uninstall';

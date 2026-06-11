@@ -70,7 +70,7 @@ function addActionCommand(program: Command, context: CliContext, action: Install
   program
     .command(action)
     .requiredOption('--target <target>', 'Target substrate: claude, codex, or cursor.')
-    .option('--tools <tools>', 'Comma-separated tools to include: bground, banchor, or all.', DEFAULT_TOOL_SELECTOR)
+    .option('--tools <tools>', 'Comma-separated tools to include (any of bground / banchor / bsmell / bratch / bwatch / bspector), or all.', DEFAULT_TOOL_SELECTOR)
     .option('--scope <scope>', 'Destination scope: user or project.', parseScope, DEFAULT_SCOPE)
     .option('--dest <path>', 'Explicit destination path. For codex this is AGENTS.md. For other targets this is the target directory.')
     .option('--dry-run', 'Print planned file operations without writing.', false)

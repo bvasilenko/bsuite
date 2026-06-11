@@ -13,7 +13,7 @@ export async function withTempDir(task: (directory: string) => Promise<void>): P
 export function operationOptions(target: TargetName, cwd: string, overrides: Partial<OperationOptions> = {}): OperationOptions {
   return {
     target,
-    tools: ['bground', 'banchor'],
+    tools: ['bground', 'banchor', 'bsmell', 'bratch', 'bwatch', 'bspector'],
     scope: 'project',
     dryRun: false,
     cwd,

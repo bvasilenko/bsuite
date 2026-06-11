@@ -1,0 +1,7 @@
+---
+description: Prompt lookup tool. Agent names a smell category from a fixed list; bsmell returns the prompt for that smell category. The prompt tells the agent how to check the session for that smell.
+globs: ["**/*"]
+alwaysApply: false
+---
+
+Use `bsmell` from this tool family. Invoke via bash. See exit codes for branch logic.

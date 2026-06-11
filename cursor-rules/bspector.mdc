@@ -1,0 +1,7 @@
+---
+description: Prompt lookup tool. Agent names a vulnerability pattern from a fixed list; bspector returns the prompt for that vulnerability pattern. The prompt tells the agent how to check the skill manifest for that vulnerability.
+globs: ["**/*"]
+alwaysApply: false
+---
+
+Use `bspector` from this tool family. Invoke via bash. See exit codes for branch logic.

@@ -36,7 +36,7 @@ describe('installClaude', () => {
     await withTempDir(async (cwd) => {
       const result = await installClaude(operationOptions('claude', cwd, { dryRun: true }));
 
-      expect(result.entries).toHaveLength(2);
+      expect(result.entries).toHaveLength(6);
       await expect(readFile(path.join(cwd, '.claude', 'skills', 'bground', 'SKILL.md'), 'utf8')).rejects.toMatchObject({ code: 'ENOENT' });
     });
   });
