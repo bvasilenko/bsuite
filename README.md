@@ -2,13 +2,25 @@
 
 Entry point for the b-* prompt lookup tools. Installs the tools, registers each as a Claude Code skill, Codex AGENTS template, or Cursor rule so the agent loop discovers and invokes them, and updates installed tools on demand.
 
-## Install
+## One-line install
 
 ```sh
 npm install -D @booga/b
 ```
 
-## Use
+That single line:
+
+- Pulls `b` plus the 6 prompt lookup tools (bground, banchor, bsmell, bratch, bwatch, bspector) onto your machine.
+- Auto-registers all 6 with every supported substrate by default: Claude Code, Codex, and Cursor.
+- Scope is project-local for a project install (writes to `<project>/.claude/skills/`, `<project>/AGENTS.md`, `<project>/.cursor/rules/`).
+- Scope is user-wide for a global install (`npm install -g @booga/b`).
+
+## Opt-out
+
+- Skip the auto-register step entirely: set `B_SKIP_AUTO_INSTALL=1` before `npm install`.
+- Skip specific substrates: set `B_SKIP_TARGETS=cursor,codex` before `npm install`.
+
+You can still run the install CLI by hand later:
 
 ```sh
 b install --target=claude
@@ -24,12 +36,9 @@ Shipped:
 - [bGround](https://github.com/bvasilenko/bGround) - prompt lookup for claim grounding
 - [bAnchor](https://github.com/bvasilenko/bAnchor) - prompt lookup for task-to-mission anchoring
 - [bSmell](https://github.com/bvasilenko/bSmell) - prompt lookup for deflection-pattern smells
-
-Pending:
-
-- bRatch - prompt lookup for regression-signature checks
-- bWatch - prompt lookup for external-tracker findings
-- bSpector - prompt lookup for vulnerability patterns in agent skill bundles
+- [bRatch](https://github.com/bvasilenko/bRatch) - prompt lookup for regression-signature checks
+- [bWatch](https://github.com/bvasilenko/bWatch) - prompt lookup for external-tracker findings
+- [bSpector](https://github.com/bvasilenko/bSpector) - prompt lookup for vulnerability patterns in agent skill bundles
 
 Shared dependency:
 
